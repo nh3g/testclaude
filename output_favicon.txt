@@ -1,0 +1,108 @@
+──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br/favicon.ico -o favicon.ico
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  8710  100  8710    0     0   9386      0 --:--:-- --:--:-- --:--:--  9385
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# file favicon.ico
+
+favicon.ico: MS Windows icon resource - 1 icon, 45x46, 32 bits/pixel
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# strings favicon.ico
+
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# exiftool favicon.ico
+
+ExifTool Version Number         : 13.25
+File Name                       : favicon.ico
+Directory                       : .
+File Size                       : 8.7 kB
+File Modification Date/Time     : 2025:11:11 15:01:29-03:00
+File Access Date/Time           : 2025:11:11 15:01:35-03:00
+File Inode Change Date/Time     : 2025:11:11 15:01:29-03:00
+File Permissions                : -rw-rw-r--
+File Type                       : ICO
+File Type Extension             : ico
+MIME Type                       : image/x-icon
+Image Count                     : 1
+Image Width                     : 45
+Image Height                    : 46
+Num Colors                      : 0
+Color Planes                    : 1
+Bits Per Pixel                  : 32
+Image Length                    : 8688
+Image Size                      : 45x46
+Megapixels                      : 0.002
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# for file in dump.cer homolodoc.pem backup.tar database.tgz; do
+    echo "Testing: $file"
+    curl -u "morandin:devops" -I https://homolodoc.com.br/$file
+done
+Testing: dump.cer
+HTTP/2 200 
+date: Tue, 11 Nov 2025 18:02:13 GMT
+content-type: text/html; charset=utf-8
+content-length: 1281
+last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+etag: "69123e6c-501"
+accept-ranges: bytes
+strict-transport-security: max-age=15724800; includeSubDomains
+
+Testing: homolodoc.pem
+HTTP/2 200 
+date: Tue, 11 Nov 2025 18:02:14 GMT
+content-type: text/html; charset=utf-8
+content-length: 1281
+last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+etag: "69123e6c-501"
+accept-ranges: bytes
+strict-transport-security: max-age=15724800; includeSubDomains
+
+Testing: backup.tar
+HTTP/2 200 
+date: Tue, 11 Nov 2025 18:02:15 GMT
+content-type: text/html; charset=utf-8
+content-length: 1281
+last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+etag: "69123e6c-501"
+accept-ranges: bytes
+strict-transport-security: max-age=15724800; includeSubDomains
+
+Testing: database.tgz
+HTTP/2 200 
+date: Tue, 11 Nov 2025 18:02:16 GMT
+content-type: text/html; charset=utf-8
+content-length: 1281
+last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+etag: "69123e6c-501"
+accept-ranges: bytes
+strict-transport-security: max-age=15724800; includeSubDomains
+
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br/backup.tar -o backup.tar
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1281  100  1281    0     0   1342      0 --:--:-- --:--:-- --:--:--  1341
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br/database.tgz -o database.tgz
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1281  100  1281    0     0   1323      0 --:--:-- --:--:-- --:--:--  1321
+                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br/.git/HEAD
+
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons"><script src=https://www.google.com/recaptcha/api.js async defer></script><script src=/ruxitagentjs_ICA2SVfqru_10199200831173248.js data-dtconfig="app=ea7c4b59f27d43eb|featureHash=ICA2SVfqru|vcv=2|reportUrl=/rb_bf73111yuk|rdnt=1|uxrgce=1|bp=3|cuc=wn924kip|dpvc=1|lastModification=1599592438163|dtVersion=10199200831173248|tp=500,50,0,1|uxdcw=1500|vs=2"></script><title>Teladoc TDOC_OP</title><link href=/css/app.7b1b0906.css rel=preload as=style><link href=/css/chunk-vendors.96683755.css rel=preload as=style><link href=/js/app.faa9c175.js rel=preload as=script><link href=/js/chunk-vendors.fa9a1aea.js rel=preload as=script><link href=/css/chunk-vendors.96683755.css rel=stylesheet><link href=/css/app.7b1b0906.css rel=stylesheet></head><body><div id=app></div><script src=/js/chunk-vendors.fa9a1aea.js></script><script src=/js/app.faa9c175.js></script></body></html>                                                                                          
+┌──(root㉿nh3g)-[~/…/homolodoc.com.br/js/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br/.env
+
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons"><script src=https://www.google.com/recaptcha/api.js async defer></script><script src=/ruxitagentjs_ICA2SVfqru_10199200831173248.js data-dtconfig="app=ea7c4b59f27d43eb|featureHash=ICA2SVfqru|vcv=2|reportUrl=/rb_bf73111yuk|rdnt=1|uxrgce=1|bp=3|cuc=wn924kip|dpvc=1|lastModification=1599592438163|dtVersion=10199200831173248|tp=500,50,0,1|uxdcw=1500|vs=2"></script><title>Teladoc TDOC_OP</title><link href=/css/app.7b1b0906.css rel=preload as=style><link href=/css/chunk-vendors.96683755.css rel=preload as=style><link href=/js/app.faa9c175.js rel=preload as=script><link href=/js/chunk-vendors.fa9a1aea.js rel=preload as=script><link href=/css/chunk-vendors.96683755.css rel=stylesheet><link href=/css/app.7b1b0906.css rel=stylesheet></head><body><div id=app></div><script src=/js/chunk-vendors.fa9a1aea.js></script><script src=/js/app.faa9c175.js></script></body></html>            

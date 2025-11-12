@@ -1,0 +1,78 @@
+┌──(root㉿nh3g)-[~]
+└─# curl -u "morandin:devops" https://homolodoc.com.br
+
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons"><script src=https://www.google.com/recaptcha/api.js async defer></script><script src=/ruxitagentjs_ICA2SVfqru_10199200831173248.js data-dtconfig="app=ea7c4b59f27d43eb|featureHash=ICA2SVfqru|vcv=2|reportUrl=/rb_bf73111yuk|rdnt=1|uxrgce=1|bp=3|cuc=wn924kip|dpvc=1|lastModification=1599592438163|dtVersion=10199200831173248|tp=500,50,0,1|uxdcw=1500|vs=2"></script><title>Teladoc TDOC_OP</title><link href=/css/app.7b1b0906.css rel=preload as=style><link href=/css/chunk-vendors.96683755.css rel=preload as=style><link href=/js/app.faa9c175.js rel=preload as=script><link href=/js/chunk-vendors.fa9a1aea.js rel=preload as=script><link href=/css/chunk-vendors.96683755.css rel=stylesheet><link href=/css/app.7b1b0906.css rel=stylesheet></head><body><div id=app></div><script src=/js/chunk-vendors.fa9a1aea.js></script><script src=/js/app.faa9c175.js></script></body></html>                                                                                                       
+┌──(root㉿nh3g)-[~]
+└─# curl -u "morandin:devops" https://homolodoc.com.br -o home_auth.html
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1281  100  1281    0     0   1228      0  0:00:01  0:00:01 --:--:--  1230
+                                                                                                       
+┌──(root㉿nh3g)-[~]
+└─# curl -u "morandin:devops" -I -v https://homolodoc.com.br
+* Host homolodoc.com.br:443 was resolved.
+* IPv6: (none)
+* IPv4: 35.224.189.206
+*   Trying 35.224.189.206:443...
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / RSASSA-PSS
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=homolodoc.com.br
+*  start date: Sep 16 07:23:35 2025 GMT
+*  expire date: Dec 15 07:23:34 2025 GMT
+*  subjectAltName: host "homolodoc.com.br" matched cert's "homolodoc.com.br"
+*  issuer: C=US; O=Let's Encrypt; CN=R12
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Connected to homolodoc.com.br (35.224.189.206) port 443
+* using HTTP/2
+* Server auth using Basic with user 'morandin'
+* [HTTP/2] [1] OPENED stream for https://homolodoc.com.br/
+* [HTTP/2] [1] [:method: HEAD]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: homolodoc.com.br]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [authorization: Basic bW9yYW5kaW46ZGV2b3Bz]
+* [HTTP/2] [1] [user-agent: curl/8.15.0]
+* [HTTP/2] [1] [accept: */*]
+> HEAD / HTTP/2
+> Host: homolodoc.com.br
+> Authorization: Basic bW9yYW5kaW46ZGV2b3Bz
+> User-Agent: curl/8.15.0
+> Accept: */*
+> 
+* Request completely sent off
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+< HTTP/2 200 
+HTTP/2 200 
+< date: Tue, 11 Nov 2025 17:28:26 GMT
+date: Tue, 11 Nov 2025 17:28:26 GMT
+< content-type: text/html; charset=utf-8
+content-type: text/html; charset=utf-8
+< content-length: 1281
+content-length: 1281
+< last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+last-modified: Mon, 10 Nov 2025 19:35:08 GMT
+< etag: "69123e6c-501"
+etag: "69123e6c-501"
+< accept-ranges: bytes
+accept-ranges: bytes
+< strict-transport-security: max-age=15724800; includeSubDomains
+strict-transport-security: max-age=15724800; includeSubDomains
+< 

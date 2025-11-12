@@ -1,0 +1,63 @@
+gobuster dir -u https://homolodoc.com.br \
+  -U morandin -P devops \
+  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt \
+  -x php,asp,aspx,jsp,html,js,txt,bak,old,zip \
+  -t 30 \
+  -o diretorios_auth.txt
+===============================================================
+Gobuster v3.8
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://homolodoc.com.br
+[+] Method:                  GET
+[+] Threads:                 30
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8
+[+] Auth User:               morandin
+[+] Extensions:              aspx,jsp,old,html,js,txt,bak,zip,php,asp
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+Progress: 0 / 1 (0.00%)
+2025/11/11 14:28:45 the server returns a status code that matches the provided options for non existing urls. https://homolodoc.com.br/3090ebc2-3607-4ca3-82ba-b09690733b4d => 200 (Length: 1281). Please exclude the response length or the status code or set the wildcard option.. To continue please exclude the status code or the length
+                                                                                          
+┌──(root㉿nh3g)-[~]
+└─# dirb https://morandin:devops@homolodoc.com.br
+
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Tue Nov 11 14:29:05 2025
+URL_BASE: https://morandin:devops@homolodoc.com.br/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: https://morandin:devops@homolodoc.com.br/ ----
+==> DIRECTORY: https://morandin:devops@homolodoc.com.br/css/                                               
+==> DIRECTORY: https://morandin:devops@homolodoc.com.br/doc/                                               
++ https://morandin:devops@homolodoc.com.br/favicon.ico (CODE:200|SIZE:8710)                                
+==> DIRECTORY: https://morandin:devops@homolodoc.com.br/fonts/                                             
+==> DIRECTORY: https://morandin:devops@homolodoc.com.br/img/                                               
+==> DIRECTORY: https://morandin:devops@homolodoc.com.br/js/                                                
+                                                                                                           
+---- Entering directory: https://morandin:devops@homolodoc.com.br/css/ ----
+                                                                                                           
+---- Entering directory: https://morandin:devops@homolodoc.com.br/doc/ ----
+                                                                                                           
+---- Entering directory: https://morandin:devops@homolodoc.com.br/fonts/ ----
+                                                                                                           
+---- Entering directory: https://morandin:devops@homolodoc.com.br/img/ ----
+                                                                                                           
+---- Entering directory: https://morandin:devops@homolodoc.com.br/js/ ----
+                                                                                                           
+-----------------
+END_TIME: Tue Nov 11 15:53:32 2025
+DOWNLOADED: 27672 - FOUND: 1

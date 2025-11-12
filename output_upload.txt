@@ -1,0 +1,15 @@
+┌──(root㉿nh3g)-[~/teladoc]
+└─# ./upload_teladoc.py 
+[i] Endpoints: 2 | Payloads: 3 | Campo: file
+[i] SSL verify: True | timeout: 15s
+
+=== Endpoint: https://api.homolodoc.com.br/upload/beneficiary ===
+[415] probe.txt (text/plain)  BODY={"data": null, "error": {"message": "Unsupported Media Type", "code": 415, "trace": [{"file": "/var/www/app/Http/Middleware/ValidateFiles.php", "line": 110, "function": "validateFiles", "class": "App\\Http\\Middleware\\ValidateFiles", "type": "->", "args": [{"file": {"name": "probe.txt", "type": "text/plain", "tmp_name": "/tmp/phpx9hdzL", "error": 0, "size": 24}}]}, {"file": "/var/www/vendor/larav
+[500] probe.jpg (image/jpeg)  BODY={"group_id": {"required": "\"Group id\" is a required attribute"}}
+[415] probe.bin (application/octet-stream)  BODY={"data": null, "error": {"message": "Unsupported Media Type", "code": 415, "trace": [{"file": "/var/www/app/Http/Middleware/ValidateFiles.php", "line": 110, "function": "validateFiles", "class": "App\\Http\\Middleware\\ValidateFiles", "type": "->", "args": [{"file": {"name": "probe.bin", "type": "application/octet-stream", "tmp_name": "/tmp/phpbcTGmn", "error": 0, "size": 24}}]}, {"file": "/var/ww
+
+=== Endpoint: https://api.homolodoc.com.br/User/document/create ===
+[401] probe.txt (text/plain)  BODY={"error": {"message": "Token not provided.", "code": 1006}}
+[401] probe.jpg (image/jpeg)  BODY={"error": {"message": "Token not provided.", "code": 1006}}
+[401] probe.bin (application/octet-stream)  BODY={"error": {"message": "Token not provided.", "code": 1006}}
+

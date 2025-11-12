@@ -1,0 +1,11 @@
+┌──(root㉿nh3g)-[~/teladoc]
+└─# ./criar_user_teladoc.py   
+Status: 401
+[INFO] Rejeitado/Conflito/Não autorizado (comum em criação sem permissões).
+Resposta:
+{
+  "error": {
+    "message": "Token not provided.",
+    "code": 1006
+  }
+}

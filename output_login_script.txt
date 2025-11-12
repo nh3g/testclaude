@@ -1,0 +1,8 @@
+[!] TESTANDO API REAL: api.homolodoc.com.br
+==================================================
+
+[*] Tentando com campos: ['email', 'password']
+Status: 200
+[!] LOGIN SUCESSO!
+Response: {"data":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTU5NywibmFtZSI6Im1lZGljb19wZW50ZXN0QHRlbGFkb2MuY29tIiwiZW1haWwiOiJtZWRpY29fcGVudGVzdEB0ZWxhZG9jLmNvbSIsImNzcmYiOiJZVG8wT250ek9qUTZJblI1Y0dVaU8zTTZOem9pUkVWVFMxUlBVQ0k3Y3pvMk9pSnZjbWxuYVc0aU8zTTZOem9pVkVSUFExOVBVQ0k3Y3pvMk9pSnpkR0YwZFhNaU8ySTZNVHR6T2pRNkltaHZjM1FpTzNNNk56b2lhRzl0YjJ4dlp5STdmUT09Iiwicm9sZXNfaW5mb3JtYXRpb24iOlt7InJvbGVfaWQiOjc1LCJyb2xlX25hbWUiOiJNZWRpY28gQ29tcGxldG8ifV0sImVudGl0eV90eXBlIjoidXNlcnMiLCJ0b2tlbl9zb3VyY2UiO
+Cookies: {}
